@@ -26,6 +26,11 @@ app.use('/api/doctor', doctorRoute)
 app.use('/api/reviews', reviewRoute)
 app.use('/api/bookings', bookingRoute)
 
+// Test route
+app.get('/test', (req, res) => {
+    res.send('This is a test route!');
+});
+
 // db connection
 
 const USER = process.env.USER_NAME;
