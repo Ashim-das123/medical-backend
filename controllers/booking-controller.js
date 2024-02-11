@@ -22,7 +22,7 @@ export const getCheckoutSession = async (req, res) => {
             mode: 'payment',
             success_url: `${process.env.CLIENT_SITE_URL}/checkout-success`,
             cancel_url: `${req.protocol}://${req.get('host')}/doctor/${doctor.id}`,
-            customer_email: user.email,
+            customer_email: user?.email,
             client_reference_id: req.params.doctorId,
             line_items: [{
                 price_data: {
